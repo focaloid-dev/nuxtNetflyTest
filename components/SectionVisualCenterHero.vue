@@ -47,16 +47,16 @@
 
 <script>
 import Intersect from "vue-intersect";
-import Button from "@theme/components/Button";
-import HeaderImageOverlayAnim from "@theme/components/HeaderImageOverlayAnim";
-import AnimateWrapper from "@theme/components/AnimateWrapper";
+import Button from "./Button";
+import HeaderImageOverlayAnim from "./HeaderImageOverlayAnim";
+// import AnimateWrapper from "./AnimateWrapper";
 
 export default {
   components: {
     Intersect,
     Button,
     HeaderImageOverlayAnim,
-    AnimateWrapper,
+    // AnimateWrapper,
   },
   props: [
     "textColClass",

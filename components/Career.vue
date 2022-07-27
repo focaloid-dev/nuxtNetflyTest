@@ -47,7 +47,7 @@
   </section>
 </template>
 <script>
-import titleLine from "@theme/components/UnderlineAnimation.vue";
+import titleLine from "./UnderlineAnimation.vue";
 export default {
   components: {
     titleLine,

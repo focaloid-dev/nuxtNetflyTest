@@ -12,7 +12,7 @@
             className="btnSecondary mb-3"
             :href="button.url"
             :label="button.label"
-            :icon="button.icon" 
+            :icon="button.icon"
           />
           </div>
         </v-col>
@@ -21,7 +21,7 @@
   </section>
 </template>
 <script>
-import Button from "@theme/components/Button";
+import Button from "./Button";
 import GlobalConstants from "../GlobalConstants";
 
 export default {
@@ -43,7 +43,7 @@ export default {
         prop.every(
           (e) => {
             return (
-              typeof e.url === "string" && 
+              typeof e.url === "string" &&
               (e.icon !== undefined ? typeof e.icon === "string" : true) &&
               typeof e.label === "string"
             )

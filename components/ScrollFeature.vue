@@ -52,7 +52,7 @@
                 <img src="/img/prehead/Optimize.png" alt="Optimize" />
               </div>
               <h2>
-               
+
                 <UnderlineAnimation lineImg="/img/underline/Optimize.png"
                   > Reduce</UnderlineAnimation
                 > your attack surface and vulnerabilty count.
@@ -88,7 +88,7 @@
               </div>
             </div>
           </intersect>
-          
+
          <intersect
             @enter="setActiveContent(2)"
             :threshhold="[0, 0.2]"
@@ -130,8 +130,8 @@
               </div>
             </div>
           </intersect>
-       
-          
+
+
         </v-col>
         <v-spacer />
         <v-col v-if="!isMobile" cols="6" class="right-content">
@@ -159,7 +159,7 @@
                 :isActiveExternal="activeContent === 1"
               />
             </div>
-             
+
             <div :class="['fade-block', activeContent === 2 ? 'active' : '']">
               <ImageOverlayAnim
                 :images="[
@@ -172,10 +172,10 @@
                 :isActiveExternal="activeContent === 2"
               />
             </div>
-             
 
-           
-            
+
+
+
           </div>
         </v-col>
       </v-row>
@@ -187,9 +187,9 @@
 
 <script>
 import Intersect from "vue-intersect";
-import Button from "@theme/components/Button";
-import UnderlineAnimation from "@theme/components/UnderlineAnimation.vue";
-import ImageOverlayAnim from "@theme/components/ImageOverlayAnim";
+import Button from "./Button";
+import UnderlineAnimation from "./UnderlineAnimation.vue";
+import ImageOverlayAnim from "./ImageOverlayAnim";
 
 import GlobalConstants from "../GlobalConstants";
 
@@ -309,7 +309,7 @@ export default {
         .img-step-animation-container{
           height: 100%;
         }
-        
+
      }
     }
     &.active {
@@ -334,6 +334,6 @@ export default {
       left: 0;
     }
   }
-    
+
 }
 </style>

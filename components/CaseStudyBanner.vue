@@ -54,7 +54,7 @@
   </section>
 </template>
 <script>
-import Button from "@theme/components/Button";
+import Button from "./Button";
 
 export default {
   components: {

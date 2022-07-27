@@ -1,13 +1,13 @@
 <template>
     <section class="related-article-company">
           <v-container>
-               <div class="ralated-company-wrapper"> 
+               <div class="ralated-company-wrapper">
                 <div class="title-row">
                 <h2>Hot Off the Press</h2>
                 <router-link to="/blog">
-                  <p>See All Articles</p>                
+                  <p>See All Articles</p>
                 </router-link>
-                
+
                 </div>
                 <v-row class="justify-center mb-4">
                 <v-col
@@ -24,10 +24,10 @@
                </div>
             </v-container>
     </section>
-    
+
 </template>
 <script>
-import BlogVerticalCard from "@theme/components/BlogVerticalCard.vue";
+import BlogVerticalCard from "./BlogVerticalCard.vue";
 export default {
   components: { BlogVerticalCard },
   methods:{
@@ -107,7 +107,7 @@ export default {
             flex: 0 0 122px;
             text-align: center;
             margin: 0 0 0 auto;
-            cursor: pointer; 
+            cursor: pointer;
 
             }
         }

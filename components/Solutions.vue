@@ -75,9 +75,9 @@
 
 <script>
 import Intersect from "vue-intersect";
-import Button from "@theme/components/Button";
-import UnderlineAnimation from "@theme/components/UnderlineAnimation.vue";
-import ImageOverlayAnim from "@theme/components/ImageOverlayAnim";
+import Button from "./Button";
+import UnderlineAnimation from "./UnderlineAnimation.vue";
+import ImageOverlayAnim from "./ImageOverlayAnim";
 
 import GlobalConstants from "../GlobalConstants";
 

@@ -13,8 +13,8 @@
 import { createWidget } from "@typeform/embed";
 import "@typeform/embed/build/css/widget.css";
 
-import Subscribe from "@theme/components/Subscribe.vue";
-import Footer from "@theme/components/Footer.vue";
+import Subscribe from "./Subscribe.vue";
+import Footer from "./Footer.vue";
 
 export default {
   components: {

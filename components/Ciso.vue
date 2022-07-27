@@ -130,7 +130,7 @@
                     <h3 class="title">See how it works</h3>
                     <p>Find out how your team can use Slim.AI to create production-ready containers and minimize digital supply chain risk.</p>
                     <a href="/contact" class="btn font-primary bg-light text-uppercase">Contact us</a>
-                    
+
                 </div>
             </div>
         </div>
@@ -139,27 +139,27 @@
 
     <Content class="theme-default-content custom" />
 
-    
+
     <Footer />
   </div>
 </template>
 
 <script>
-import NavLink from "@theme/components/NavLink.vue";
-import SectionVisualRight from "@theme/components/SectionVisualRight.vue";
-import SectionVisualLeft from "@theme//components/SectionVisualLeft.vue";
-import Founders from "@theme/components/Founders.vue";
-import Investors from "@theme/components/Investors.vue";
-import Career from "@theme/components/Career.vue";
-import Subscribe from "@theme/components/Subscribe.vue";
-import Footer from "@theme/components/Footer.vue";
-import BannerLine from "@theme/components/UnderlineAnimation.vue";
-import ReviewCisoCarousel from "@theme/components/ReviewCisoCarousel.vue";
-import FeaturedAdvisors from "@theme/components/FeaturedAdvisors.vue";
-import RelatedArticlesCompany from "@theme/components/RelatedArticlesCompany.vue";
-import SocialSignup from "@theme/components/SocialSignup.vue";
-import SignUpCtas from "@theme/components/SignUpCtas.vue";
-import UnderlineAnimation from "@theme/components/UnderlineAnimation.vue";
+import NavLink from "./NavLink.vue";
+import SectionVisualRight from "./SectionVisualRight.vue";
+import SectionVisualLeft from "./SectionVisualLeft.vue";
+import Founders from "./Founders.vue";
+import Investors from "./Investors.vue";
+import Career from "./Career.vue";
+import Subscribe from ".//Subscribe.vue";
+import Footer from "./Footer.vue";
+import BannerLine from "./UnderlineAnimation.vue";
+import ReviewCisoCarousel from "./ReviewCisoCarousel.vue";
+import FeaturedAdvisors from "./FeaturedAdvisors.vue";
+import RelatedArticlesCompany from ".//RelatedArticlesCompany.vue";
+import SocialSignup from "./SocialSignup.vue";
+import SignUpCtas from "./SignUpCtas.vue";
+import UnderlineAnimation from "./UnderlineAnimation.vue";
 
 export default {
   components: {
@@ -190,8 +190,8 @@ export default {
     data() {
       return this.$page.frontmatter;
     },
-    
-     
+
+
   },
    methods: {
     changeSpanLinkFalse() {

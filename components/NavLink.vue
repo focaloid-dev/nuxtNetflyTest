@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import UnderlineAnimation from "@theme/components/UnderlineAnimation.vue";
+import UnderlineAnimation from "./UnderlineAnimation.vue";
 import { isExternal, isMailto, isTel, ensureExt } from "../util";
 
 export default {

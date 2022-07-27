@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire" class="">
-   
+
     <!-- Note - please do not use <main> elements in child components -->
     <section class="bnr_blu_cnt">
       <div class="container">
@@ -127,10 +127,10 @@
 </template>
 
 <script>
-import NavLinks from "@theme/components/NavLinks.vue";
+import NavLinks from "./NavLinks.vue";
 import { resolveSidebarItems } from "../util";
 import GlobalConstants from "../GlobalConstants";
-import Footer from "@theme/components/Footer.vue";
+import Footer from "./Footer.vue";
 import axios from "axios";
 
 //import json from "../sample.json";

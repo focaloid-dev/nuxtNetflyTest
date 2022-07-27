@@ -1,4 +1,4 @@
-  
+
   <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
@@ -33,9 +33,9 @@
     </div>
   </transition>
 </template>
-  
+
   <script>
-import HorizontalBar from "@theme/components/HorizontalBar.vue";
+import HorizontalBar from "./HorizontalBar.vue";
 
 export default {
   name: "Modal",

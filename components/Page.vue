@@ -42,14 +42,14 @@
 </template>
 
 <script>
-import PageEdit from "@theme/components/PageEdit.vue";
-import PageNav from "@theme/components/PageNav.vue";
-import Subscribe from "@theme/components/Subscribe.vue";
-import SocialSignup from "@theme/components/SocialSignup.vue";
-import Footer from "@theme/components/Footer.vue";
-import SignUpCtas from "@theme/components/SignUpCtas.vue";
-import Sidebar from "@theme/components/Sidebar.vue";
-import Banner from "@theme/components/Banner.vue";
+import PageEdit from "./PageEdit.vue";
+import PageNav from "./PageNav.vue";
+import Subscribe from "./Subscribe.vue";
+import SocialSignup from "./SocialSignup.vue";
+import Footer from "./Footer.vue";
+import SignUpCtas from "./SignUpCtas.vue";
+import Sidebar from "./Sidebar.vue";
+import Banner from "./Banner.vue";
 
 import AOS from "aos";
 
@@ -364,7 +364,7 @@ html{
     .v-input__slot{
       margin-bottom: 20px;
     }
-    
+
    }
 
 p,img,
@@ -375,7 +375,7 @@ p,img,
   :not(pre) > code[class*="language-"],
   pre[class*="language-"],
   .footercard,
-  .custom-block.tip, 
+  .custom-block.tip,
   iframe,
   div,
   blockquote {
@@ -397,7 +397,7 @@ p,img,
         box-shadow: unset;
       }
   }
- 
+
   #this-is-the-introduction-to-a-bulleted-list{
     padding-top: 35px;
       border-top: 1px solid #D8D8D8;
@@ -453,7 +453,7 @@ p,img,
               display: inline-block;
             }
     }
-   
+
     .custom-block.tip{
       padding: 53px 50px;
       background-color: #E5E6ED;

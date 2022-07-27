@@ -21,7 +21,7 @@
     </a>
    <div  class="git-btn-header">
    <a href="https://github.com/docker-slim" target="_blank">
-   Github 
+   Github
    <img :src="starSvg"/>
    </a>
    <a href="https://github.com/docker-slim/docker-slim/stargazers" target="_blank" class="Github_count">{{stargazerCount}}</a>
@@ -44,8 +44,8 @@
 
 <script>
 import { resolveNavLinkItem } from "../util";
-import Button from "@theme/components/Button.vue";
-import NavLink from "@theme/components/NavLink.vue";
+import Button from "./Button.vue";
+import NavLink from "./NavLink.vue";
 import GithubButton from "vue-github-button";
 import StarSvg from "../uploads/Star.svg"
 import GlobalConstants from "../GlobalConstants";
@@ -80,7 +80,7 @@ export default {
       this.stargazerCount = responce.stargazers_count;
     }
   },
- 
+
   computed: {
     userNav() {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || [];

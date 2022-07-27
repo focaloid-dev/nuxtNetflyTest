@@ -72,7 +72,7 @@
     <FeaturedAdvisors />
     <Investors />
     <RelatedArticlesCompany class="mt-8"/>
-    
+
     <Content class="theme-default-content custom" />
 
     <span id="mc_signup"></span>
@@ -85,20 +85,20 @@
 </template>
 
 <script>
-import NavLink from "@theme/components/NavLink.vue";
-import SectionVisualRight from "@theme/components/SectionVisualRight.vue";
-import SectionVisualLeft from "@theme//components/SectionVisualLeft.vue";
-import Founders from "@theme/components/Founders.vue";
-import Investors from "@theme/components/Investors.vue";
-import Career from "@theme/components/Career.vue";
-import Subscribe from "@theme/components/Subscribe.vue";
-import Footer from "@theme/components/Footer.vue";
-import BannerLine from "@theme/components/UnderlineAnimation.vue";
-import ReviewCarousel from "@theme/components/ReviewCarousel.vue";
-import FeaturedAdvisors from "@theme/components/FeaturedAdvisors.vue";
-import RelatedArticlesCompany from "@theme/components/RelatedArticlesCompany.vue";
-import SocialSignup from "@theme/components/SocialSignup.vue";
-import SignUpCtas from "@theme/components/SignUpCtas.vue";
+import NavLink from "./NavLink.vue";
+import SectionVisualRight from "./SectionVisualRight.vue";
+import SectionVisualLeft from "./SectionVisualLeft.vue";
+import Founders from "./Founders.vue";
+import Investors from "./Investors.vue";
+import Career from "./Career.vue";
+import Subscribe from "./Subscribe.vue";
+import Footer from "./Footer.vue";
+import BannerLine from "./UnderlineAnimation.vue";
+import ReviewCarousel from "./ReviewCarousel.vue";
+import FeaturedAdvisors from "./FeaturedAdvisors.vue";
+import RelatedArticlesCompany from "./RelatedArticlesCompany.vue";
+import SocialSignup from "./SocialSignup.vue";
+import SignUpCtas from "./SignUpCtas.vue";
 
 
 export default {

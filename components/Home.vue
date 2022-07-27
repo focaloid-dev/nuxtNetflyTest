@@ -21,13 +21,13 @@
       >
         <template v-slot:title>
           <span v-if="isMobile">
-            Build secure containers, 
+            Build secure containers,
             <UnderlineAnimation :lineImg="lineImg"
               >faster</UnderlineAnimation
             >
           </span>
           <span v-else>
-            Build secure containers, 
+            Build secure containers,
             <UnderlineAnimation :lineImg="lineImg"
               >faster</UnderlineAnimation
             >
@@ -80,8 +80,8 @@
         },
       ]"
     />
-    
-    
+
+
     <SignUpCtas />
     <SocialSignup />
     <Footer />
@@ -89,19 +89,19 @@
 </template>
 
 <script>
-import NavLink from "@theme/components/NavLink.vue";
-import SectionVisualCenterHero from "@theme/components/SectionVisualCenterHero.vue";
-import Footer from "@theme/components/Footer.vue";
-import ScrollFeature from "@theme/components/ScrollFeature.vue";
-import Solutions from "@theme/components/Solutions.vue";
+import NavLink from "./NavLink.vue";
+import SectionVisualCenterHero from "./SectionVisualCenterHero.vue";
+import Footer from "./Footer.vue";
+import ScrollFeature from "./ScrollFeature.vue";
+import Solutions from "./Solutions.vue";
 
-import CaseStudyBanner from "@theme/components/CaseStudyBanner.vue";
-import ReviewCarousel from "@theme/components/ReviewCarousel.vue";
-import Scan from "@theme/components/Scan.vue";
+import CaseStudyBanner from "./CaseStudyBanner.vue";
+import ReviewCarousel from "./ReviewCarousel.vue";
+import Scan from "./Scan.vue";
 
-import SignUpCtas from "@theme/components/SignUpCtas.vue";
-import SocialSignup from "@theme/components/SocialSignup.vue";
-import UnderlineAnimation from "@theme/components/UnderlineAnimation.vue";
+import SignUpCtas from "./SignUpCtas.vue";
+import SocialSignup from "./SocialSignup.vue";
+import UnderlineAnimation from "./UnderlineAnimation.vue";
 
 import GlobalConstants from "../GlobalConstants";
 
@@ -179,7 +179,7 @@ export default {
   font-size: 28px;
   margin-top:20px;
 }
- 
+
 @media (max-width: $MQMobile) {
   .titleFont {
     font-size: 30px;

@@ -333,7 +333,7 @@
                       View More Licenses
                     </button>
                     </div>
-                    
+
                     <PackageLicense
                       :packages="package_by_license(packages, 'all')"
                       v-show="isModalVisible"
@@ -399,19 +399,19 @@
 </template>
 
 <script>
-import NavLinks from "@theme/components/NavLinks.vue";
-import PackageLicense from "@theme/components/PackageLicense.vue";
+import NavLinks from "./NavLinks.vue";
+import PackageLicense from "./PackageLicense.vue";
 
 import { resolveSidebarItems } from "../util";
 import GlobalConstants from "../GlobalConstants";
-import { fetchContainersJson } from "@theme/card/apiService.js";
-import HorizontalBar from "@theme/components/HorizontalBar.vue";
+import { fetchContainersJson } from "../card/apiService.js";
+import HorizontalBar from "./HorizontalBar.vue";
 
 import {
   vulns_severity_count,
   layer_summary,
   package_license_count,
-} from "@theme/card/util.js";
+} from "../card/util.js";
 import moment from "moment";
 import ChartJSPluginDatalabels from "chartjs-plugin-datalabels";
 

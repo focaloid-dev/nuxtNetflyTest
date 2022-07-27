@@ -89,14 +89,14 @@
 </template>
 
 <script>
-import Subscribe from "@theme/components/Subscribe.vue";
-import SocialSignup from "@theme/components/SocialSignup.vue";
-import SignUpCtas from "@theme/components/SignUpCtas.vue";
-import Footer from "@theme/components/Footer.vue";
-import BlogVerticalCard from "@theme/components/BlogVerticalCard.vue";
-import Banner from "@theme/components/Banner";
-import TabButtons from "@theme/components/TabButtons";
-import blogCarousal from "@theme/components/Carousal";
+import Subscribe from "./Subscribe.vue";
+import SocialSignup from "./SocialSignup.vue";
+import SignUpCtas from "./SignUpCtas.vue";
+import Footer from "./Footer.vue";
+import BlogVerticalCard from "./BlogVerticalCard.vue";
+import Banner from "./Banner";
+import TabButtons from "./TabButtons";
+import blogCarousal from "./Carousal";
 import arrowBlue from "../uploads/arrow-blue.png";
 import arrowGreen from "../uploads/arrow-green.png";
 import arrowup from "../uploads/arrow-up.png";
@@ -159,7 +159,7 @@ export default {
           ? post.frontmatter.tags.indexOf(tag) >= 0
           : true;
       const author = this.selectedAuthor
-      const matchAuthor = 
+      const matchAuthor =
         author ? post.frontmatter.authorname === author : true
       return matchPath && matchTag && notReadMe && matchAuthor;
     },
@@ -172,7 +172,7 @@ export default {
           post.frontmatter.tags.includes(name)
         );
         this.showText = true
-        
+
       }
     },
   },
