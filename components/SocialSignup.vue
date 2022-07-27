@@ -5,7 +5,7 @@
         <v-col cols="12" md="6" class="text-center pr-md-12">
           <img
             :aria-label="GlobalConstants.slimAiLogo"
-            src="/img/logo/Slim Bug@2x.png"
+            src="~assets/img/logo/Slim Bug@2x.png"
             height="52"
             class="slim-va-middle"
           />
@@ -27,7 +27,7 @@
               class="img-nav-item"
             >
               <img
-                src="/img/logo/Twitch@2x.png"
+                src="~assets/img/logo/Twitch@2x.png"
                 class="mr-3 slim-va-middle"
                 alt=""
               />
@@ -39,7 +39,7 @@
               class="img-nav-item"
             >
               <img
-                src="/img/logo/Discord@2x.png"
+                src="~assets/img/logo/Discord@2x.png"
                 class="mr-3 slim-va-middle"
                 alt=""
               />
@@ -59,7 +59,7 @@
               class="img-nav-item"
             >
               <img
-                src="/img/logo/Github@2x.png"
+                src="~assets/img/logo/Github@2x.png"
                 class="mr-3 slim-va-middle"
                 alt=""
               />
@@ -73,7 +73,7 @@
               class="img-nav-item"
             >
               <img
-                src="/img/scan/calendar.svg"
+                src="~assets/img/scan/calendar.svg"
                 class="mr-3 slim-va-middle"
                 alt=""
               /><div style="font-size:20px; font-weight:bold">View Calendar</div>
@@ -84,16 +84,16 @@
           <img
             class="separator-img vertical"
             alt=""
-            src="/img/vertical-separator.png"
+            src="~assets/img/vertical-separator.png"
           />
           <img
             class="separator-img horizontal"
             alt=""
-            src="/img/horizontal-separator.png"
+            src="~assets/img/horizontal-separator.png"
           />
         </v-col>
         <v-col cols="12" md="6" class="text-center pl-md-12">
-          <img src="/img/icons/Talk.png" height="52" class="slim-va-middle" />
+          <img src="~assets/img/icons/Talk.png" height="52" class="slim-va-middle" />
           <h3>
             Stay in the know about product updates, give us feedback, and get
             exclusive access to tutorials, news, and more.
@@ -186,7 +186,7 @@ export default {
   }),
 };
 </script>
-<style lang="stylus">
+<style>
 .social-signup-wrapper {
   padding: 80px 8px;
 

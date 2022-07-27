@@ -21,7 +21,7 @@
   </section>
 </template>
 <script>
-import Button from "@theme/components/Button";
+import Button from "../components/Button";
 import GlobalConstants from "../GlobalConstants";
 
 export default {
@@ -80,7 +80,7 @@ export default {
   },
 };
 </script>
-<style lang="stylus">
+<style>
 .sign-up-ctas {
   text-align: center;
   margin-top: 100px;

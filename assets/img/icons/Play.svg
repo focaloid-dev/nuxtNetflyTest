@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Play</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Slim-Home-R4" transform="translate(-227.000000, -1626.000000)">
+            <g id="Discover" transform="translate(207.000000, 1293.000000)">
+                <g transform="translate(0.000000, 32.781250)" id="Discover-Text">
+                    <g id="Group-2" transform="translate(3.648222, 289.000000)">
+                        <g id="Icon/Play" transform="translate(18.000000, 13.000000)">
+                            <circle id="Oval" stroke="#FFFFFF" stroke-width="3" cx="11.5" cy="11.5" r="11.5"></circle>
+                            <path d="M13.8479983,8.35679729 L17.0437507,13.4700011 C17.336461,13.9383376 17.1940878,14.555288 16.7257513,14.8479983 C16.5668197,14.9473306 16.3831721,15 16.1957524,15 L9.80424764,15 C9.25196289,15 8.80424764,14.5522847 8.80424764,14 C8.80424764,13.8125803 8.85691709,13.6289327 8.95624934,13.4700011 L12.1520017,8.35679729 C12.444712,7.88846076 13.0616624,7.74608759 13.5299989,8.03879792 C13.6587681,8.11927863 13.7675176,8.22802815 13.8479983,8.35679729 Z" id="Triangle" fill="#FFFFFF" transform="translate(13.000000, 11.000000) rotate(90.000000) translate(-13.000000, -11.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

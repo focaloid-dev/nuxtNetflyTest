@@ -83,10 +83,6 @@ export default {
 
 
 
-    <nuxt-content :document="page"/>
-
-
-
       </v-toolbar-title>
       <v-spacer />
       <!-- <SearchBox class="hidden-xs-only"/> -->
@@ -96,9 +92,9 @@ export default {
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
-        <NavLinks class="d-flex flex-column" menuMode="true" />
+       
       </v-menu>
-      <NavLinks v-if="!isTablet" class="d-flex" />
+    
     </v-app-bar>
     <!-- Note - please do not use <main> elements in child components -->
     <v-main>
@@ -106,26 +102,9 @@ export default {
         <!-- this is the column where we only want to apply a css class if we are on the blog index page -->
         <v-col :class="getMainColClass()" cols="12" sm="12" md="12">
           <Home
-            v-if="$page.frontmatter.home"
-            :isMobile="isMobile"
-            :isSmallBreakpoint="isSmallBreakpoint"
+           
           />
-          <Company v-else-if="$page.frontmatter.company" />
-          <Ciso v-else-if="$page.frontmatter.solutions" />
-          <Contact v-else-if="$page.frontmatter.contact" />
-
-          <Card v-else-if="$page.frontmatter.containers" />
-
-          <EarlyAccessSignup v-else-if="$page.frontmatter.earlyAccessSignup" />
-          <Blog v-else-if="$page.frontmatter.blog" />
-          <Page v-else :sidebar-items="sidebarItems">
-            <template #top>
-              <slot name="page-top" />
-            </template>
-            <template #bottom>
-              <slot name="page-bottom" />
-            </template>
-          </Page>
+          
         </v-col>
       </v-row>
     </v-main>
@@ -133,34 +112,15 @@ export default {
 </template>
 
 <script>
-import Home from "@theme/components/Home.vue";
-import SearchBox from "@theme/components/SearchBox.vue";
-import NavLinks from "@theme/components/NavLinks.vue";
-import Page from "@theme/components/Page.vue";
-import { resolveSidebarItems } from "../util";
-import Company from "@theme/components/Company.vue";
-import Card from "@theme/components/Card.vue";
-import Ciso from "@theme/components/Ciso.vue";
-import Contact from "@theme/components/Contactus.vue";
-
-import EarlyAccessSignup from "@theme/components/EarlyAccessSignup.vue";
-import Blog from "@theme/components/Blog.vue";
+import Home from "../components/Home.vue";
 import GlobalConstants from "../GlobalConstants";
+
 export default {
   props: {
     source: String,
   },
   components: {
     Home,
-    Company,
-    Card,
-    Ciso,
-    Contact,
-    EarlyAccessSignup,
-    Page,
-    NavLinks,
-    SearchBox,
-    Blog,
     GlobalConstants,
   },
 
@@ -175,7 +135,6 @@ export default {
   computed: {
     shouldShowNavbar() {
       const { themeConfig } = this.$site;
-      const { frontmatter } = this.$page;
       if (frontmatter.navbar === false || themeConfig.navbar === false) {
         return false;
       }
@@ -188,19 +147,11 @@ export default {
       );
     },
     shouldShowSidebar() {
-      const { frontmatter } = this.$page;
-      return (
-        !frontmatter.home &&
-        frontmatter.sidebar !== false &&
-        this.sidebarItems.length
-      );
+     
     },
     sidebarItems() {
       const items = resolveSidebarItems(
-        this.$page,
-        this.$page.regularPath,
-        this.$site,
-        this.$localePath
+       
       );
 
       return items;
@@ -244,7 +195,7 @@ export default {
 </script>
 
 
-<style lang="stylus">
+<style>
 #banner {
   display: flex;
   justify-content: center;

@@ -14,18 +14,18 @@
         >
           <span class="legalLinks" :class="isBlogView() ? 'blockLinks' : null">
             <span class="pl-2 pr-2 slimfont18">
-              <a href="/terms-of-use.html" target="_blank"
+              <a href="#" target="_blank"
                 >Terms &#38; Conditions</a
               >
             </span>
             <span class="pl-2 pr-2 slimfont18">
-              <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
+              <a href="#" target="_blank">Privacy Policy</a>
             </span>
             <span class="pl-2 pr-2 slimfont18">
-              <a href="/company" target="_blank">Our Company</a>
+              <a href="#" target="_blank">Our Company</a>
             </span>
             <span class="pl-2 pr-2 slimfont18">
-              <a href="/contact" target="">Contact Us</a>
+              <a href="#" target="">Contact Us</a>
             </span>
           </span>
         </v-col>
@@ -36,98 +36,10 @@
           order="first"
           order-md="0"
         >
-          <routerLink aria-label="Slim.AI Home Page" :to="$localePath">
-            <img
-              :aria-label="GlobalConstants.slimAiLogo"
-              src="/img/logo/Slim Bug@2x.png"
-              height="52"
-              class="slim-va-middle"
-            />
-          </routerLink>
+         
         </v-col>
         <v-col cols="12" md="" class="justify-end text-center text-md-right">
-          <div>
-            <a
-              :aria-label="GlobalConstants.twitchAriaLabel"
-              :href="GlobalConstants.socialUrlTwitch"
-              target="_blank"
-              class="img-nav-item"
-            >
-              <InlineSvg
-                src="/img/twitch.svg"
-                height="24"
-                class="mr-5 slim-va-middle"
-                alt=""
-              />
-            </a>
-            <a
-              :aria-label="GlobalConstants.twitterAriaLabel"
-              :href="GlobalConstants.socialUrlTwitter"
-              class="img-nav-item"
-              target="_blank"
-            >
-              <InlineSvg
-                src="/img/twitter.svg"
-                height="24"
-                class="mr-5 slim-va-middle"
-                alt=""
-              />
-            </a>
-            <a
-              :aria-label="GlobalConstants.linkedinAriaLabel"
-              :href="GlobalConstants.socialUrlLinkedin"
-              class="img-nav-item"
-              target="_blank"
-            >
-              <InlineSvg
-                src="/img/linkedin.svg"
-                height="24"
-                class="mr-5 slim-va-middle"
-                alt=""
-              />
-            </a>
-            <a
-              :aria-label="GlobalConstants.githubAriaLabel"
-              :href="GlobalConstants.socialUrlGithub"
-              target="_blank"
-              class="img-nav-item"
-            >
-              <InlineSvg
-                src="/img/github.svg"
-                height="24"
-                class="mr-5 slim-va-middle"
-                alt=""
-              />
-            </a>
-            <a
-              :aria-label="GlobalConstants.discordAriaLabel"
-              :href="GlobalConstants.socialUrlDiscord"
-              target="_blank"
-              class="img-nav-item"
-            >
-              <InlineSvg
-                src="/img/discord.svg"
-                height="24"
-                class="mr-5 slim-va-middle"
-                alt=""
-              />
-            </a>
-            <a
-              :aria-label="GlobalConstants.youtubeAriaLabel"
-              :href="GlobalConstants.socialUrlYoutube"
-              class="img-nav-item"
-              target="_blank"
-            >
-              <v-icon large>mdi-youtube</v-icon>
-            </a>
-            <!-- <a
-              :href="GlobalConstants.socialUrlFacebook"
-              class="img-nav-item ml-1"
-              target="_blank"
-            >
-              <v-icon medium color="grey darken-3">mdi-facebook</v-icon>
-            </a> -->
-          </div>
+          
         </v-col>
       </v-row>
     </div>
@@ -137,11 +49,10 @@
 <script>
 // import PageEdit from '@theme/components/PageEdit.vue'
 // import PageNav from '@theme/components/PageNav.vue'
-import InlineSvg from "vue-inline-svg";
+
 import GlobalConstants from "../GlobalConstants";
 
 export default {
-  components: { InlineSvg },
   props: ["pageName"],
   methods: {
     isBlogView() {
@@ -154,7 +65,7 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus">
+<style>
 .footer {
   background-color: $btnSecondaryHoverColor;
   padding: 24px 60px;

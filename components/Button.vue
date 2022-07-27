@@ -31,7 +31,7 @@ export default {
   },
 };
 </script>
-<style lang="stylus">
+<style>
 .button-wrapper {
   display: inline-block;
   margin-bottom: 10px;
