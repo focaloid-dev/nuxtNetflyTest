@@ -1,42 +1,17 @@
 <template>
   <v-app id="inspire" class="documents_wrap">
-    <v-navigation-drawer
-      v-if="shouldShowSidebar"
-      :clipped="$vuetify.breakpoint.lgAndUp"
-      app
-    >
-      <v-treeview
-        item-key="path"
-        item-text="title"
-        :items="sidebarItems"
-        dense
-        open-all
-        hoverable
-        open-on-click
-        activatable
-   
-      >     <!-- @update:active="updateActive" -->
+    <v-navigation-drawer v-if="shouldShowSidebar" :clipped="$vuetify.breakpoint.lgAndUp" app>
+      <v-treeview item-key="path" item-text="title" :items="sidebarItems" dense open-all hoverable open-on-click
+        activatable>
+        <!-- @update:active="updateActive" -->
       </v-treeview>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="$vuetify.breakpoint.lgAndUp"
-      app
-      :color="'#FFFFFF'"
-      elevate-on-scroll
-      id="navBar"
-      class="pr-sm-12 pt-4"
-      extended
-      extension-height="30"
-    >
+    <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app :color="'#FFFFFF'" elevate-on-scroll id="navBar"
+      class="pr-sm-12 pt-4" extended extension-height="30">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="false" />
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4 text--black">
         <routerLink :to="'index'">
-          <img
-            width="160"
-            :src="'/img/logo_charcoal_424242.svg'"
-            :alt="'Slim.ai'"
-            class="ml-md-12 mt-1"
-          />
+          <img width="160" :src="'/img/logo_charcoal_424242.svg'" :alt="'Slim.ai'" class="ml-md-12 mt-1" />
         </routerLink>
       </v-toolbar-title>
       <v-spacer />
@@ -47,33 +22,35 @@
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
-        <NavLinks class="d-flex flex-column" menuMode="true" />
+        <!-- <NavLinks class="d-flex flex-column" menuMode="true" /> -->
       </v-menu>
-      <NavLinks v-if="true" class="d-flex" />
+      <!-- <NavLinks v-if="true" class="d-flex" /> -->
     </v-app-bar>
 
-    <nuxt-content :document="page" />
-    
+
     <!-- Note - please do not use <main> elements in child components -->
     <v-main>
       <v-row no-gutters align="center" justify="center">
-        <!-- this is the column where we only want to apply a css class if we are on the blog index page -->
+        <nuxt-content :document="page" />
       </v-row>
+      <Footer />
     </v-main>
-
+  </v-app>
 </template>
-
+row
 <script lang="ts">
 import Vue from "vue";
+import Footer from "../components/Footer.vue";
 export default Vue.component("test", {
-  components: {},
+  components: {
+    Footer
+  },
   asyncData: async ({ $content, params }) => {
     const slug = params.slug || "index";
     let page = null;
     try {
       page = await $content(slug).fetch();
-    } catch {}
-
+    } catch { }
     return {
       page,
     };
@@ -147,4 +124,5 @@ export default Vue.component("test", {
   }
 }
 </style>
-<style src="prismjs/themes/prism-okaidia.css"></style>
+<style src="prismjs/themes/prism-okaidia.css">
+</style>

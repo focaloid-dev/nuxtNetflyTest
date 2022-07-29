@@ -1,0 +1,404 @@
+
+@import './palette.sass'
+
+div.theme-default-content:not(.custom)
+  max-width: 100%
+
+div.theme-default-content
+  img
+    max-width: 100%
+
+.fwContent
+  background-color: yellow
+
+.titleFont
+  font-family: 'AvantGardeGothicITCW01Bd', sans-serif
+  font-size: 48px
+  font-weight: 900
+
+.subTitleFont
+  font-family: 'AvantGardeGothicITCW01Bk'
+  font-size: 18px
+  font-weight: 600
+
+.columnList
+  font-family: 'AvantGardeGothicITCW01Bk', sans-serif
+  font-size: 18px
+  font-weight: 600
+  text-align: left
+
+.columnTitle
+  line-height: 1.3em
+  font-size: 48px
+  font-family: 'AvantGardeGothicITCW01Bd', sans-serif
+  font-weight: 900
+
+.columnHeadline
+  font-family: Courier, 'Courier New', monospace
+  font-size: 15px
+  font-weight: 400
+  text-align: left
+
+li
+  margin: 10px 0
+
+.colorDark
+  color: #444444
+
+.colorGreyed
+  color: #707070
+
+.colorDark2
+  color: #373A36
+
+.backColorBlue
+  background-color: $blueBgColor
+
+.section
+  padding: 24px
+
+.repo-link
+  color: black
+
+.borderBoxRed
+  border: red 2px solid
+
+.borderBoxGreen
+  border: green 2px solid
+
+.borderBoxBlue
+  border: blue 2px solid
+
+.normalCaps
+  text-transform: none !important
+
+.buttonStd
+  color: white !important
+  width: 220px
+  min-height: 50px
+  font-size: 1rem
+  font-family: AvantGardeGothicITCW01Bk
+  font-weight: normal
+
+// Temporary scoping for home page changes
+.home, .v-application nav
+  .btnPrimary, .btnSecondary, .btnText, .text-cta
+    font-family: $fontFamily
+    border-radius: 4px
+    font-size: 13px
+    font-weight: 800
+    text-transform: uppercase
+    padding: 14px 20px
+    letter-spacing: $buttonLetterSpacing
+    transition: all $hoverTransitionTime ease-in-out
+
+  .btnPrimary, .btnSecondary
+    &:hover
+      transform: translateY(-1px)
+      box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.09)
+
+  .btnPrimary
+    color: $btnPrimaryTextColor
+    background-color: $btnPrimaryBgColor
+
+    &:hover
+      background-color: $blueBgColor
+
+  .btnSecondary
+    color: $btnSecondaryTextColor
+    background-color: $btnSecondaryBgColor
+
+    &:hover
+      background-color: $btnSecondaryHoverColor
+
+  .btnText
+    color: $btnSecondaryTextColor
+    background-color: transparent
+
+    &:hover
+      background-color: $btnSecondaryHoverColor
+
+  .text-cta
+    height: auto
+    padding: 0
+    text-decoration: underline
+    color: $btnPrimaryBgColor
+
+    &:hover
+      color: $textLinkColor
+
+.v-application nav
+  .btnPrimary
+    padding: 14px 21px
+    height: 37px
+    background-color: #1F6BF1
+
+  .btnSecondary
+    background-color: $btnSecondaryHoverColor
+
+    &:hover
+      background-color: $borderColor
+
+.v-application code
+  font-size: 100% !important
+
+@media (max-width: $MQNarrow)
+  .titleFont
+    font-size: 30px
+
+@media (max-width: $MQMobileNarrow)
+  .titleFont
+    font-size: 30px
+
+.v-card__text
+  margin-bottom: 1.5rem
+
+.v-application p
+  margin-bottom: 16px
+  line-height: 28px
+  font-size: 18px
+  color: #000000
+
+  a
+    color: $textLinkColor
+    font-weight: 500
+
+.blog-post-container article .theme-default-content
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+
+  @media (min-width: 768px)
+    max-width: 66.6666%
+
+  > p:first-of-type > img:first-of-type
+    display: block
+
+    &
+      width: 114%
+      max-width: 114%
+      margin-left: -7%
+      margin-right: -7%
+
+  blockquote
+    background-color: #F3FAFD
+    padding: 40px 40px 30px
+    position: relative
+    margin: 30px 0
+
+    p
+      font-weight: 300
+      font-size: 24px
+      line-height: 138.5%
+      margin: 0
+      padding: 0
+
+    &::before
+      content: ''
+      background-image: url('/img/quote.svg')
+      background-size: contain
+      width: 50px
+      height: 60px
+      color: $btnPrimaryBgColor
+      font-size: 100px
+      position: absolute
+      top: -16px
+      left: 22px
+
+  .button-wrapper
+    .hero-btn
+      background-color: #1F6BF1
+      color: #fff !important
+      width: 226px
+      height: 62px
+      font-size: 18px
+      line-height: 32.67px
+      letter-spacing: 0.82px
+      &:hover
+        background-color: #0096e9
+
+    .understand-wrapper
+      @media (max-width: 959px)
+        margin: 140px 0 !important
+
+        @media (max-width: 480px)
+          margin: 140px 0 !important
+
+      .img-step-animation-container
+        top: 50px
+        @media (max-width: 1263px)
+          top: 0
+
+          @media (min-width: 1904px)
+            top: 120px
+
+      .deep-dive-img
+        max-width: 221px
+        width: 100%
+        height: 138px
+        top: -100px
+        @media (max-width: 1263px)
+          top: -40px
+
+          @media (max-width: 959px)
+            top: -91px
+            left: calc(50% - 221px) !important
+
+          @media (max-width: 480px)
+            top: -70px
+            left: 0 !important
+            height: 100px
+            max-width: 150px
+
+          @media (min-width: 1904px)
+            height: 138px !important
+
+      .deep-dive-bottom-img
+        max-width: 278px
+        width: 100%
+        height: 161px
+        bottom: -114px
+        right: 114px
+        left: auto !important
+        @media (max-width: 1263px)
+          bottom: -72px
+          right: 51px
+
+          @media (max-width: 959px)
+            bottom: -111px
+            left: calc(50% - 100px) !important
+            right: auto
+
+          @media (max-width: 480px)
+            bottom: -80px
+            left: auto !important
+            right: 30px
+            max-width: 211px
+            width: 100%
+            height: 114px
+
+          @media (min-width: 1904px)
+            height: 161px !important
+
+      .understand-img-main
+        height: 448px
+        object-fit: contain
+        @media (max-width: 959px)
+          height: auto
+
+          @media (min-width: 1904px)
+            height: 600px !important
+
+  .git-btn-header
+    display: flex
+    padding: 0
+    margin-top: 0 !important
+    margin-right: 19px
+    border: 1px solid #1F6BF1
+    border-radius: 4px
+    cursor: pointer
+    a
+      display: flex
+      align-items: center
+      font-family: 'hk_grotesk', sans-serif
+      font-size: 10px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 1px
+      color: #000 !important
+      border-right: 1px solid #1F6BF1
+      padding: 10px 12px
+      img
+        margin-left: 8px
+        padding: 0
+
+    .Github_count
+      display: flex
+      align-items: center
+      font-size: 10px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 1px
+      color: #000
+      padding: 10px 12px
+      border: none
+
+// @font-face
+//   font-family: 'Roboto'
+//   font-style: normal
+//   font-weight: 400
+//   src: url('../fonts/roboto-v20-latin/roboto-v20-latin-regular.eot')
+//   src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-v20-latin/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), url('./fonts/roboto-v20-latin/roboto-v20-latin-regular.woff2') format('woff2'), url('./fonts/roboto-v20-latin/roboto-v20-latin-regular.woff') format('woff'), url('./fonts/roboto-v20-latin/roboto-v20-latin-regular.ttf') format('truetype'), url('./fonts/roboto-v20-latin/roboto-v20-latin-regular.svg#Roboto') format('svg')
+  /* Legacy iOS */
+
+@font-face
+  font-family: 'AvantGardeGothicITCW01Bd'
+  src: url('../fonts/AvantGardeGothicITCW01Bd/font.woff')
+  font-weight: bold
+
+@font-face
+  font-family: 'AvantGardeGothicITCW01Bd'
+  src: url('../fonts/AvantGardeGothicITCW01Bd/font.woff')
+  font-weight: bold
+
+@font-face
+  font-family: 'AvantGardeGothicITCW01Bk'
+  src: url('../fonts/AvantGardeGothicITCW01Bk/font.woff')
+
+@font-face
+  font-family: 'AvantGardeGothicITCW02BkObl'
+  src: url('../fonts/AvantGardeGothicITCW02BkObl/font.woff')
+
+@font-face
+  font-family: 'AvantGardeGothicITCW02Md '
+  src: url('../fonts/AvantGardeGothicITCW02Md/font.woff')
+
+@font-face
+  font-family: 'hk_grotesk'
+  src: url('../fonts/hkgrotesk/hkgrotesk-medium-webfont.woff2') format('woff2'), url('../fonts/hkgrotesk/hkgrotesk-medium-webfont.woff') format('woff')
+  font-weight: 500
+  font-style: normal
+
+@font-face
+  font-family: 'hk_grotesk'
+  src: url('../fonts/hkgrotesk/hkgrotesk-regular-webfont.woff2') format('woff2'), url('../fonts/hkgrotesk/hkgrotesk-regular-webfont.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'hk_grotesk'
+  src: url('../fonts/hkgrotesk/hkgrotesk-bold-webfont.woff2') format('woff2'), url('../fonts/hkgrotesk/hkgrotesk-bold-webfont.woff') format('woff')
+  font-weight: 700
+  font-style: normal
+
+@font-face
+  font-family: 'hk_grotesk'
+  src: url('../fonts/hkgrotesk/hkgrotesk-light-webfont.woff2') format('woff2'), url('../fonts/hkgrotesk/hkgrotesk-light-webfont.woff') format('woff')
+  font-weight: 200
+  font-style: normal
+
+@font-face
+  font-family: 'hk_grotesk'
+  src: url('../fonts/hkgrotesk/hkgrotesk-semibold-webfont.woff2') format('woff2'), url('../fonts/hkgrotesk/hkgrotesk-semibold-webfont.woff') format('woff')
+  font-weight: 600
+  font-style: normal
+
+@font-face
+  font-family: 'hk_grotesk'
+  src: url('../fonts/hkgrotesk/hkgrotesk-extrabold-webfont.woff2') format('woff2'), url('../fonts/hkgrotesk/hkgrotesk-extrabold-webfont.woff') format('woff')
+  font-weight: 800
+  font-style: normal
+
+@font-face
+  font-family: 'Max Sans'
+  src: url('../fonts/maxsans/MaxSans-Bold.woff2') format('woff2'),url('../fonts/maxsans/MaxSans-Bold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: 'Max Sans'
+  src: url('../fonts/maxsans/MaxSans-Regular.woff2') format('woff2'),url('../fonts/maxsans/MaxSans-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
