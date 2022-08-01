@@ -22,10 +22,11 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    { src: '~/assets/css/styles/palette.sass', lang: 'sass' },
-    { src: '~/assets/css/styles.sass', lang: 'sass' },
-    { src: '~/assets/css/styles/index.sass', lang: 'sass' },
-    { src: '~/assets/css/index.sass', lang: 'sass' },
+    //{ src: '~/assets/css/styles/palette.sass', lang: 'sass' },
+   // { src: '~/assets/css/styles.sass', lang: 'sass' },
+    //{ src: '~/assets/css/styles/index.sass', lang: 'sass' },
+    //{ src: '~/assets/css/index.sass', lang: 'sass' },
+    //{ src: '~/assets/css/main.sass', lang: 'sass' }
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -46,8 +47,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/style-resources'
+
   ],
+  styleResources: {
+    sass: ['~/assets/css/*.sass']
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

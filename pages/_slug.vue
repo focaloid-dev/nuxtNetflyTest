@@ -1,17 +1,18 @@
 <template>
   <v-app id="inspire" class="documents_wrap">
-    <v-navigation-drawer v-if="shouldShowSidebar" :clipped="$vuetify.breakpoint.lgAndUp" app>
-      <v-treeview item-key="path" item-text="title" :items="sidebarItems" dense open-all hoverable open-on-click
-        activatable>
+    
+    <!-- <v-navigation-drawer v-if="shouldShowSidebar" :clipped="$vuetify.breakpoint.lgAndUp" app> -->
+      <!-- <v-treeview item-key="path" item-text="title" dense open-all hoverable open-on-click -->
+        <!-- activatable> -->
         <!-- @update:active="updateActive" -->
-      </v-treeview>
-    </v-navigation-drawer>
+      <!-- </v-treeview> -->
+    <!-- </v-navigation-drawer> -->
     <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app :color="'#FFFFFF'" elevate-on-scroll id="navBar"
       class="pr-sm-12 pt-4" extended extension-height="30">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="false" />
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4 text--black">
         <routerLink :to="'index'">
-          <img width="160" :src="'/img/logo_charcoal_424242.svg'" :alt="'Slim.ai'" class="ml-md-12 mt-1" />
+          <img width="160" src="~assets/img/logo_charcoal_424242.svg" :alt="'Slim.ai'" class="ml-md-12 mt-1" />
         </routerLink>
       </v-toolbar-title>
       <v-spacer />
@@ -30,7 +31,7 @@
 
     <!-- Note - please do not use <main> elements in child components -->
     <v-main>
-      <v-row no-gutters align="center" justify="center">
+      <v-row no-gutters align="center" justify="center" class="abc">
         <nuxt-content :document="page" />
       </v-row>
       <Footer />
@@ -62,7 +63,7 @@ export default Vue.component("test", {
         {
           type: "group",
           path: "/",
-          title: "Home",
+          title: "",
           sidebarDepth: 1,
           children: [],
           collapsable: false,
@@ -113,7 +114,10 @@ export default Vue.component("test", {
 .v-application .elevation-3 {
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.09) !important;
 }
-
+.abc{
+  min-height: 800px;
+  padding: 50px;
+}
 .mtCol {
   margin-top: 64px;
 }

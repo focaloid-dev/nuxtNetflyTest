@@ -1,7 +1,7 @@
 <template>
   <div class="page home">
     <div class="hero">
-
+      
     </div>
     <SignUpCtas />
     <SocialSignup />
@@ -19,8 +19,10 @@ import GlobalConstants from "../GlobalConstants";
 
 export default {
   components: {
+    
     SignUpCtas,
     SocialSignup,
+   
     Footer,
   },
   props: {
@@ -83,7 +85,7 @@ export default {
   font-size: 28px;
   margin-top:20px;
 }
-
+ 
 @media (max-width: $MQMobile) {
   .titleFont {
     font-size: 30px;
