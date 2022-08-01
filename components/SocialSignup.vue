@@ -9,16 +9,14 @@
             height="52"
             class="slim-va-middle"
           />
-           <h3 v-if="ciso">
-             {{ ciso }}
-            </h3>
-          <h3 v-else> 
-            Join our developer community today to get involved in the
-            conversation. 
+          <h3 v-if="ciso">
+            {{ ciso }}
           </h3>
-          
+          <h3 v-else>
+            Join our developer community today to get involved in the
+            conversation.
+          </h3>
 
-          
           <div class="social-ctas-container" v-if="!ciso">
             <a
               :aria-label="GlobalConstants.twitchAriaLabel"
@@ -65,10 +63,10 @@
               />
             </a>
           </div>
-            <div class="social-ctas-container" v-else>
+          <div class="social-ctas-container" v-else>
             <a
               :aria-label="GlobalConstants.twitchAriaLabel"
-              href=''
+              href=""
               target=""
               class="img-nav-item"
             >
@@ -76,9 +74,12 @@
                 src="~assets/img/scan/calendar.svg"
                 class="mr-3 slim-va-middle"
                 alt=""
-              /><div style="font-size:20px; font-weight:bold">View Calendar</div>
+              />
+              <div style="font-size: 20px; font-weight: bold">
+                View Calendar
+              </div>
             </a>
-            </div>
+          </div>
         </v-col>
         <v-col cols="12" justify="center" align="center" class="separator">
           <img
@@ -93,7 +94,11 @@
           />
         </v-col>
         <v-col cols="12" md="6" class="text-center pl-md-12">
-          <img src="~assets/img/icons/Talk.png" height="52" class="slim-va-middle" />
+          <img
+            src="~assets/img/icons/Talk.png"
+            height="52"
+            class="slim-va-middle"
+          />
           <h3>
             Stay in the know about product updates, give us feedback, and get
             exclusive access to tutorials, news, and more.
@@ -179,122 +184,102 @@ export default {
       onBlur(mceEMAIL);
     };
   },
-  props: ['ciso'],
+  props: ["ciso"],
 
   data: () => ({
     GlobalConstants,
   }),
 };
 </script>
-<style>
-.social-signup-wrapper {
-  padding: 80px 8px;
+<style lang="sass">
+.social-signup-wrapper
+  padding: 80px 8px
 
-  h3 {
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
+  h3
+    margin-top: 20px
+    margin-bottom: 40px
 
-  .row {
-    position: relative;
-  }
+  .row
+    position: relative
 
-  .social-ctas-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  .social-ctas-container
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 20px
 
-    a {
-      margin: 0 5px;
+    a
+      margin: 0 5px
+      @media (min-width: map.get($grid-breakpoints, "md"))
 
-      @media (min-width: $grid-breakpoints.md) {
-        margin: 0 15px;
-      }
-    }
+      // @media (min-width: $grid-breakpoints.md)
+        margin: 0 15px
 
-    .img-nav-item {
-      img {
-        height: 40px;
+    .img-nav-item
+      img
+        height: 40px
+      // @media (min-width: $grid-breakpoints.md)
 
-        @media (min-width: $grid-breakpoints.md) {
-          height: 52px;
-        }
-      }
+        @media (min-width: map.get($grid-breakpoints, "md"))
+          height: 52px
 
-      i {
-        font-size: 54px;
+      i
+        font-size: 54px
 
-        @media (min-width: $grid-breakpoints.md) {
-          font-size: 72px;
-        }
-      }
-    }
-  }
+  &
+    font-size: 72px
 
-  .separator {
-    pointer-events: none;
+  .separator
+    pointer-events: none
+      // @media (min-width: $grid-breakpoints.md)
 
-    @media (min-width: $grid-breakpoints.lg) {
-      width: 100%;
-      position: absolute;
-    }
+    @media (min-width: map.get($grid-breakpoints, "md"))
+      width: 100%
+      position: absolute
 
-    .separator-img {
-      max-width: 100%;
+    .separator-img
+      max-width: 100%
+      &.vertical
+        display: none
 
-      &.vertical {
-        display: none;
-      }
+      &.horizontal
+        display: block
+      // @media (min-width: $grid-breakpoints.md)
 
-      &.horizontal {
-        display: block;
-      }
+        @media (min-width: map.get($grid-breakpoints, "md"))
+        &.vertical
+          display: block
 
-      @media (min-width: $grid-breakpoints.lg) {
-        &.vertical {
-          display: block;
-        }
+        &.horizontal
+          display: none
 
-        &.horizontal {
-          display: none;
-        }
-      }
-    }
-  }
+  .form-wrapper
+    max-width: 410px
+    margin: auto
+    input
+      border: none
+      outline: none
 
-  .form-wrapper {
-    max-width: 410px;
-    margin: auto;
-    input{
-         border: none;
-        outline: none;
-      }
-    .mc-field-group {
-      padding: 11px 10px;
-      border-radius: 30px;
-      border: 1px solid $formBorderColor;
-      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.09);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .mc-field-group
+      padding: 11px 10px
+      border-radius: 30px
+      border: 1px solid $formBorderColor
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.09)
+      display: flex
+      justify-content: space-between
+      align-items: center
 
-      .email {
-        flex-grow: 2;
-        font-size: 13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 0 20px;
-        letter-spacing: $buttonLetterSpacing;
-        border: none;
-        outline: none;
-      }
-      
-      .joinusbtn {
-        height: 30px;
-        padding: 0 15px;
-      }
-    }
-  }
-}
+      .email
+        flex-grow: 2
+        font-size: 13px
+        font-weight: 700
+        text-transform: uppercase
+        padding: 0 20px
+        letter-spacing: $buttonLetterSpacing
+        border: none
+        outline: none
+
+      .joinusbtn
+        height: 30px
+        padding: 0 15px
 </style>

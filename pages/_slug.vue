@@ -25,7 +25,7 @@
         </template>
         <!-- <NavLinks class="d-flex flex-column" menuMode="true" /> -->
       </v-menu>
-      <!-- <NavLinks v-if="true" class="d-flex" /> -->
+      <NavLinks v-if="true" class="d-flex" />
     </v-app-bar>
 
 
@@ -41,10 +41,13 @@
 row
 <script lang="ts">
 import Vue from "vue";
+import NavLinks from "../components/NavLinks.vue";
+
 import Footer from "../components/Footer.vue";
 export default Vue.component("test", {
   components: {
-    Footer
+    Footer,
+    NavLinks,
   },
   asyncData: async ({ $content, params }) => {
     const slug = params.slug || "index";

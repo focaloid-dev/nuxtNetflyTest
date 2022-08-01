@@ -6,14 +6,14 @@
           <h2>{{ title }}</h2>
           <p>{{ copy }}</p>
           <div class="home">
-          <Button
-            v-for="(button, index) in buttons"
-            :key="index"
-            className="btnSecondary mb-3"
-            :href="button.url"
-            :label="button.label"
-            :icon="button.icon" 
-          />
+            <Button
+              v-for="(button, index) in buttons"
+              :key="index"
+              className="btnSecondary mb-3"
+              :href="button.url"
+              :label="button.label"
+              :icon="button.icon"
+            />
           </div>
         </v-col>
       </v-row>
@@ -40,15 +40,13 @@ export default {
     buttons: {
       type: Array,
       validator: (prop) =>
-        prop.every(
-          (e) => {
-            return (
-              typeof e.url === "string" && 
-              (e.icon !== undefined ? typeof e.icon === "string" : true) &&
-              typeof e.label === "string"
-            )
-          }
-        ),
+        prop.every((e) => {
+          return (
+            typeof e.url === "string" &&
+            (e.icon !== undefined ? typeof e.icon === "string" : true) &&
+            typeof e.label === "string"
+          );
+        }),
       default: function () {
         return [
           {
@@ -80,44 +78,36 @@ export default {
   },
 };
 </script>
-<style>
-.sign-up-ctas {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 15px;
+<style lang="sass">
+.sign-up-ctas
+  text-align: center
+  margin-top: 100px
+  margin-bottom: 15px
 
-  .banner-container {
-    background-image: url('/img/background/background-smudge.png');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    padding: 40px 40px;
+  .banner-container
+    background-image: url('/img/background/background-smudge.png')
+    background-size: cover
+    background-position: right
+    background-repeat: no-repeat
+    padding: 40px 40px
 
-    @media (min-width: $grid-breakpoints.lg) {
-      border-radius: 20px;
-      padding: 60px 60px;
-    }
+    @media (min-width: map.get($grid-breakpoints, "lg"))
+      border-radius: 20px
+      padding: 60px 60px
 
-    &.lightblue-bg {
-      background-color: $lightBlueBgColor;
-    }
+    &.lightblue-bg
+      background-color: $lightBlueBgColor
 
-    h2 {
-      margin: 0 0 10px;
-    }
+    h2
+      margin: 0 0 10px
 
-    p {
-      margin-bottom: 25px;
-    }
+    p
+      margin-bottom: 25px
 
-    .button-wrapper {
-      width: 280px;
-      margin-bottom: 0px;
+    .button-wrapper
+      width: 280px
+      margin-bottom: 0px
 
-      @media (min-width: $grid-breakpoints.lg) {
-        width: auto;
-      }
-    }
-  }
-}
+      @media (min-width: map.get($grid-breakpoints, "lg"))
+        width: auto
 </style>
