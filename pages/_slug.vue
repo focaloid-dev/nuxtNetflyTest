@@ -12,6 +12,7 @@ export default {
       post = await $content("blog", params.slug || "index").fetch();
       // OR const article = await $content(`articles/${params.slug}`).fetch()
     } catch (e) {
+      console.log('error', e)
       error({ message: "Blog Post not found" });
     }
 
