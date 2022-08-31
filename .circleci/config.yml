@@ -7,8 +7,8 @@ jobs:
     docker:
       - image: 'cimg/base:stable'
         auth:
-          username: alshoja@gmail.com
-          password: alshoja@233793  # context / project UI env-var reference
+          username: $DOCKER_HUB_USERNAME
+          password: $DOCKER_HUB_PASSWORD # context / project UI env-var reference
     steps:
       - checkout
       - setup_remote_docker:
