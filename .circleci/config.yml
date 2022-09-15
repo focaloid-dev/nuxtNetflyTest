@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  slim-xray-poc-orb: focaloid-dev/slim-xray-poc-orb@dev:021e6728d99623eb5c40b98479c318ec7a88fea6
+  slim-xray-poc-orb: focaloid-dev/slim-xray-poc-orb@dev:d2ae12b36a2a16be8fda9c29ca3221bdd03c804b
 
 jobs:
   scan:
@@ -17,6 +17,9 @@ jobs:
 
       - slim-xray-poc-orb/scan:
           imageName: cimg/base:stable
+      - store_artifacts:
+          path: /tmp/artifact-1
+          destination: artifact-file
 workflows:
   slim-xray-poc-orb:
     jobs:
