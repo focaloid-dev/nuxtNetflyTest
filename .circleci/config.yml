@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  slim-xray-poc-orb: focaloid-dev/slim-xray-poc-orb@dev:d2ae12b36a2a16be8fda9c29ca3221bdd03c804b
+  slim-xray-poc-orb: focaloid-dev/slim-xray-poc-orb@1.0.0
 
 jobs:
   scan:
